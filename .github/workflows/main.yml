@@ -1,0 +1,22 @@
+name: VariaMosPLE_lint_build_deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  
+  linter:
+    runs-on: 'ubuntu-latest'
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: Super-Linter
+      uses: github/super-linter@v4.9.2
+      env: 
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        LOG_FILE: log_file_from_super-linter
+
+ 
