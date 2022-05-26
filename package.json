@@ -3,6 +3,8 @@
     "test": "jest"
   },
   "devDependencies": {
-    "jest": "^28.1.0"
+    "babel-jest": "^28.1.0",
+    "jest": "^28.1.0",
+    "jest-cli": "^28.1.0"
   }
 }
